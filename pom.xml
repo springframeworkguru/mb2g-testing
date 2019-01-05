@@ -26,14 +26,22 @@
         </extensions>
     </build>
 
-    <distributionManagement>
-        <repository>
-            <id>packagecloud.release</id>
-            <url>packagecloud+https://packagecloud.io/springframeworkguru/release</url>
-        </repository>
-        <snapshotRepository>
-            <id>packagecloud.snapshot</id>
-            <url>packagecloud+https://packagecloud.io/springframeworkguru/snapshot</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <profiles>
+        <profile>
+            <id>packagecloud</id>
+            <distributionManagement>
+                <repository>
+                    <id>packagecloud.release</id>
+                    <url>packagecloud+https://packagecloud.io/springframeworkguru/release</url>
+                </repository>
+                <snapshotRepository>
+                    <id>packagecloud.snapshot</id>
+                    <url>packagecloud+https://packagecloud.io/springframeworkguru/snapshot</url>
+                </snapshotRepository>
+            </distributionManagement>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
 </project>
