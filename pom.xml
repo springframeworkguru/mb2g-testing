@@ -39,9 +39,19 @@
                     <url>packagecloud+https://packagecloud.io/springframeworkguru/snapshot</url>
                 </snapshotRepository>
             </distributionManagement>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+        </profile>
+        <profile>
+            <id>nexus_distro</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>nexus-snapshot</id>
+                    <url>http://localhost:8081/repository/nexus-snapshot/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>nexus-release</id>
+                    <url>http://localhost:8081/repository/nexus-release/</url>
+                </repository>
+            </distributionManagement>
         </profile>
     </profiles>
 </project>
