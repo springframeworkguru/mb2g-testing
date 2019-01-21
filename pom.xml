@@ -16,6 +16,14 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>guru.springframework</groupId>
+            <artifactId>jpa-entities</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <extensions>
             <extension>
