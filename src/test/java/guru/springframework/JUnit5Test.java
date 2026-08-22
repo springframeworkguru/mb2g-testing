@@ -1,6 +1,6 @@
 package guru.springframework;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 /**
  * Created by jt on 2018-12-12.
